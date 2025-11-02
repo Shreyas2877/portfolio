@@ -73,7 +73,7 @@ const About: React.FC = () => {
         <div className="about-text">
           <div className="about-description">
             <p>
-              Hello! I'm Shreyas, a software engineer based in Dublin, Ireland.
+              Hello! I'm Shreyas, a software engineer based in Dublin, Ireland. I hold a Master of Science in Information Systems from University College Dublin (UCD).
             </p>
             <p>
               I like doing anything tech - from building <span className="highlight">apps</span>, 
