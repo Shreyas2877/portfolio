@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
       </div>
       
       <div className="projects-list">
-        {projects.map((project, index) => {
+        {projects.map((project) => {
           const currentIndex = project.images ? (currentImageIndex[project.id] || 0) : 0;
           const displayImage = project.image || (project.images ? project.images[currentIndex] : null);
           
