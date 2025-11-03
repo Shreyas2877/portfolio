@@ -56,10 +56,15 @@
 
 .hero-cta {
   margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem 1.75rem;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -68,19 +73,37 @@
   cursor: pointer;
   transition: all 0.25s ease;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
-  border: 1px solid var(--accent);
   background: transparent;
-  color: var(--accent);
+  outline: none;
+  border: none;
 }
 
 .btn-primary {
   color: var(--accent);
-  border-color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .btn-primary:hover {
   background: rgba(37, 99, 235, 0.1);
   transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  background: transparent;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.btn-secondary svg {
+  flex-shrink: 0;
 }
 
 @keyframes fadeInUp {

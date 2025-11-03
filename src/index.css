@@ -98,6 +98,32 @@ h6 {
   --card-bg: #111111;
 }
 
+/* Dark theme (lighter dark) */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  --bg-primary-rgb: 15, 23, 42;
+}
+
+/* Darker theme (current default) */
+[data-theme="darker"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border-color: #1f1f1f;
+  --card-bg: #111111;
+  --bg-primary-rgb: 10, 10, 10;
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   body {
