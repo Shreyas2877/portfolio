@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
           <p className="hero-description">
             I'm a software engineer specializing in building (and occasionally designing)
             exceptional digital experiences. Currently, I'm focused on building accessible,
-            human-centered products at <span className="highlight-company">upcoming</span>.
+            human-centered products at <span className="highlight-company">IBM</span>.
           </p>
           <div className="hero-cta">
             <a 
