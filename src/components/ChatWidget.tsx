@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './ChatWidget.css';
 
 interface Message {
@@ -155,7 +156,27 @@ const ChatWidget: React.FC = () => {
                 className={`chat-message ${message.role === 'user' ? 'user-message' : 'assistant-message'}`}
               >
                 <div className="message-content">
-                  {message.content}
+                  {message.role === 'assistant' ? (
+                    <ReactMarkdown
+                      components={{
+                        p: ({ node, ...props }) => <p className="markdown-p" {...props} />,
+                        strong: ({ node, ...props }) => <strong className="markdown-strong" {...props} />,
+                        em: ({ node, ...props }) => <em className="markdown-em" {...props} />,
+                        ul: ({ node, ...props }) => <ul className="markdown-ul" {...props} />,
+                        ol: ({ node, ...props }) => <ol className="markdown-ol" {...props} />,
+                        li: ({ node, ...props }) => <li className="markdown-li" {...props} />,
+                        h1: ({ node, ...props }) => <h1 className="markdown-h1" {...props} />,
+                        h2: ({ node, ...props }) => <h2 className="markdown-h2" {...props} />,
+                        h3: ({ node, ...props }) => <h3 className="markdown-h3" {...props} />,
+                        code: ({ node, ...props }) => <code className="markdown-code" {...props} />,
+                        pre: ({ node, ...props }) => <pre className="markdown-pre" {...props} />,
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                  ) : (
+                    message.content
+                  )}
                 </div>
               </div>
             ))}
