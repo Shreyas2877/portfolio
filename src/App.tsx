@@ -7,6 +7,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Tech from './sections/Tech';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Tech />
         </main>
         <Footer />
+        <ChatWidget />
       </div>
     </ThemeProvider>
   );
