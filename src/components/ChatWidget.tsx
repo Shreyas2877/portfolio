@@ -39,13 +39,11 @@ const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Prepare conversation history (excluding system message)
-      const conversationHistory = messages
-        .filter(msg => msg.role !== 'system')
-        .map(msg => ({
-          role: msg.role,
-          content: msg.content
-        }));
+      // Prepare conversation history for API
+      const conversationHistory = messages.map(msg => ({
+        role: msg.role,
+        content: msg.content
+      }));
 
       const response = await fetch('/api/chat', {
         method: 'POST',
