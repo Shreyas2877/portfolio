@@ -40,8 +40,8 @@ const ChatWidget: React.FC = () => {
 
     try {
       // Prepare conversation history for API
-      const conversationHistory = messages.map(msg => ({
-        role: msg.role,
+      const conversationHistory: Array<{ role: 'user' | 'assistant'; content: string }> = messages.map(msg => ({
+        role: msg.role as 'user' | 'assistant',
         content: msg.content
       }));
 
